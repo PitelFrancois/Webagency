@@ -1,0 +1,744 @@
+@font-face {
+    font-family: 'GLYPHICONS Halflings';
+    src: url('fonts/GLYPHICONSHalflings-Regular.eot');
+    src: url('fonts/GLYPHICONSHalflings-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/GLYPHICONSHalflings-Regular.woff2') format('woff2'),
+    url('fonts/GLYPHICONSHalflings-Regular.woff') format('woff'),
+    url('fonts/GLYPHICONSHalflings-Regular.ttf') format('truetype'),
+    url('fonts/GLYPHICONSHalflings-Regular.svg#GLYPHICONSHalflings-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('fonts/FontAwesome.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+body{
+	margin: 0px ;
+	padding: 0px ;
+	font-family: 'Roboto' ;
+}
+
+/************************* Partie header *************************/
+
+header{
+	width: 100% ;
+	position: fixed ;
+	top: 0px ;
+	left: 0px ;
+	z-index: 10 ;
+	background-color: white ; 
+}
+#nav_fixe{
+	width: 100% ;
+	height: 100px ;
+	display: flex ;
+	justify-content: space-around ;
+	align-items: center ;
+}
+.menu ul{
+	display: flex ;
+	list-style-type: none ;
+	justify-content: space-around ;
+    padding-left: 0px ;
+}
+.menu li a{
+	margin-left: 10px ;
+	text-decoration: none ;
+	color: #777 ;
+	padding: 13px ;
+	font-size: 0.8em ;
+	border-top: 2px solid white ;
+}
+.menu li a:hover{
+	border-top: 2px solid #3491b2 ;
+	padding-top: 42px ;
+	color: black ;
+}
+
+
+/************************* Partie slider *************************/
+
+#slider{
+	overflow: hidden ;
+	margin-top: 100px ;
+    z-index: 2 ;
+    position: relative ;
+}
+#slider figure{
+	width: 500%;
+	margin: 0;
+	left:0;
+	animation: 15s slider infinite ;
+}
+#slider figure img{
+	width: 20%;
+	float: left ;
+}
+@keyframes slider{
+	0%{
+		left: 0 ;
+	}
+	15%{
+		left: 0 ;
+	}
+	50%{
+		left: -100% ;
+	}
+	65%{
+		left: -100% ;
+	}
+	100%{
+		left: 0 ;
+	}
+}
+.slider_description{
+    width: 500px ;
+    height: auto ;
+    position: absolute ;
+    top: 25% ;
+    left: 15% ;
+    color: white ;
+}
+.slider_description h1{
+    text-transform: uppercase ;
+    font-size: 2em ;
+}
+.infos{
+    width: 100px ;
+    height: auto ;
+    font-size: 1em ;
+    font-weight: bold ;
+    background-color: #5cadd3 ; 
+    text-align: center ;
+    padding: 10px ;
+    border-radius: 3px ;
+    box-shadow: 0px 3px 0px #3491b2 ;  
+}
+.infos a{
+
+    list-style-type: none ;
+    text-decoration: none ;
+    color: white ;
+}
+.titre{
+    color: #5cadd3 ;
+}
+.barre{
+    position: absolute ;
+    bottom: 0px ;
+    height: 3px ;
+    background-color: #5cadd3 ;
+    animation: barre 15s linear infinite ;
+    z-index: 2 ;
+}
+@keyframes barre{
+    0%{width: 0px }
+    15%{ width: 0px }
+    50%{ width: 100% }
+    65%{ width: 100% }
+    100%{ width: 0px }
+}
+.fa-chevron-left{
+    position: absolute ;
+    left: 0px ;
+    top: 48% ;
+    color: white ;
+    font-size: 1.1em ;
+    background-color: rgba(0,0,0,0.3);
+    width: 15px ;
+    height: 40px ;
+    padding-top: 22px ;
+    padding-right: 15px;
+    padding-left: 2px ;
+    border-radius: 0px 50px 50px 0px ;
+}
+.fa-chevron-right{
+    position: absolute ;
+    right: 0px ;
+    top: 48% ;
+    color: white ;
+    font-size: 1.1em ;
+    background-color: rgba(0,0,0,0.3);
+    width: 15px ;
+    height: 40px ;
+    padding-top: 22px ;
+    padding-left: 15px;
+    padding-right: 2px ;
+    border-radius: 50px 0px 0px 50px ;
+}
+
+
+/************************* Partie services *************************/
+
+#services h2{
+    text-align: center ;
+    text-transform: uppercase ;
+    font-size: 2.5em ;
+}
+.trait{
+    margin: auto ;
+    background-color: #dddddd ;
+    width: 200px ;
+    height: 3px ;
+}
+.point_bleu{
+    position: relative ;
+    margin: auto ;
+    text-align: center ;
+    top: -13px ;
+}
+.fa-circle{
+    color: #5cadd3 ;
+    border: 4px solid white ;
+    border-radius: 50% ;
+}
+#services p{
+    width: 50% ;
+    color: #777 ;
+    font-size: 0.9em ;
+    text-align: center ;
+    margin: auto ;
+    margin-top: 10px ;
+}
+.contenu{
+    display: flex ;
+    align-items: center ;
+    margin-top: 40px ;
+}
+.image{
+    display: block ;
+    width: 50% ;
+    height: 100% ;
+    text-align: center ;
+}
+.image img{
+    width: 510px ;
+    height: 319px ;
+    margin: auto ;
+}
+.graphique{
+    width: 50% ;
+    display: block;
+}
+.ux_design{
+    width: 100% ;
+    display: block ;
+    padding-bottom: 10px ;
+}
+.logo{
+    width: 60px ;
+    height: 60px ;
+    position: relative ;
+    margin-top: 35px ;
+    margin-left: 10px ;
+    border: 2px solid #dddddd ;
+    border-radius: 50% ;
+    justify-content: center ;
+    float: left ;
+}
+.fa-chart-line{
+    position: absolute ;
+    width: 60px ;
+    height: 60px ;
+    color: #5cadd3 ;
+    font-size: 1.5em ;
+    text-align: center ;
+    top: 17px ;
+}
+.fa-cubes{
+    position: absolute ;
+    width: 58px ;
+    height: 60px ;
+    color: #5cadd3 ;
+    font-size: 1.5em ;
+    text-align: center ;
+    top: 17px ;
+}
+.fa-chart-pie{
+    position: absolute ;
+    width: 60px ;
+    height: 60px ;
+    color: #5cadd3 ;
+    font-size: 1.5em ;
+    text-align: center ;
+    top: 17px ;
+    left: 2px ;
+}
+.point_bleu2{
+    position: absolute ;
+    top: 20px ;
+    left: 50px ;
+}
+.point_bleu2 .fa-circle{
+    color: #5cadd3 ;
+    border: 3px solid white ;
+    border-radius: 50% ;
+    font-size: 0.8em ;
+}
+.texte{
+    display: block ;
+    padding-left: 100px ;
+    padding-top: 1px ;
+    font-size: 0.9em ;
+}
+.texte h2{
+    font-weight: bold ;
+
+}
+.texte p{
+    width: 70% ;
+    font-size: 0.9em ;
+    color: #777 ;
+}
+.section1{
+    margin-bottom: 20px ;
+}
+#services:target {
+    padding-top: 70px ;
+}
+
+/************************* Partie Projets *************************/
+
+#projets{
+    width: 100% ;
+    background-color: #f5f5f5 ;
+    padding-top: 25px ;
+    padding-bottom: 40px ;
+    position: relative ;
+}
+#projets h2{
+    text-transform: uppercase ;
+    text-align: center ;
+    font-size: 2.5em ;
+}
+#projets p{
+    text-align: center ;
+    color: #777 ;
+    font-size: 0.9em ;
+}
+#projets nav{
+    display: block ;
+    margin-top: 40px ;
+}
+#projets ul{
+    display: flex ;
+    justify-content: center ;
+    list-style-type: none ;
+    padding-left: 0px ;
+}
+#projets li{
+    position: relative ;
+}
+#projets li a{
+    display: block ;
+    background-color: #dddddd ;
+    padding: 10px 15px 7px  ;
+    border-bottom: 4px solid #dddddd ;
+    text-decoration: none ;
+    color: #777 ;
+    position: relative ;
+    font-size: 0.9em ;
+}
+#projets li:hover a:hover{
+    background-color: #5cadd3 ;
+    color: white ;
+    border-bottom: 4px solid #3491b2 ;
+}
+#projets li:hover a:hover:before{
+    content: '\23F7' ;
+    position: absolute ;
+    top: 24px ;
+    left: calc(50% - 10px) ;
+    color: #3491b2 ;
+    font-size: 1.5em ;
+}
+.all_works{
+    border-radius: 4px 0px 0px 4px ;
+}
+.bportfolio{
+    border-radius: 0px 4px 4px 0px ;
+}
+.portfolio{
+    display: flex ;
+    flex-wrap: wrap ;
+    justify-content: center ;
+    margin-top: 50px ;
+}
+.portfolio img{
+    width: 300px ;
+    margin: auto;
+}
+figure{
+    position: relative ;
+    margin: 15px 20px ;
+}
+figcaption{
+    position: absolute ;
+    top:133px ;
+    background-color: rgba(0,0,0,0.5) ;
+    width: 290px ;
+    height: 67px ;
+    opacity: 0 ;
+    color: white ;
+    font-size: 0.9em ;
+    padding-left: 10px ;
+    line-height: 0.8em ;
+}
+figure:hover figcaption{
+    opacity: 1 ;
+}
+figcaption p:first-child{
+    font-weight: bold ;
+}
+#projets .portfolio p{
+    text-align: left ;
+    color: white ;
+}
+.fa-eye{
+    position: absolute;
+    top: -27px;
+    right: 13px;
+    color: white;
+    background-color: #5cadd3 ;
+    border: 2px solid white ;
+    border-radius: 50% ;
+    font-size: 1em ;
+    padding:18px;
+}
+#projets:target{
+    padding-top: 90px ;
+}
+
+/************************* Partie Footer *************************/
+
+footer{
+    width: 100% ;
+    position: relative ;
+    background-color: #5cadd3;
+}
+#carte{
+    display: block ;
+    width: 100% ;
+    overflow:hidden;
+    padding-bottom: 550px;
+    position:relative;
+    height:0;
+
+}
+#carte iframe{
+    left:0;
+    top:0;
+    height:550px;
+    width:100%;
+    position:absolute;
+    opacity: 0.6 ;
+}
+.formulaire{
+    position: absolute ;
+    top: 35px ;
+    right: 150px ;
+    width: 300px ;
+    background-color: rgba(255,255,255,0.7); 
+    padding-left: 15px ;
+    padding-right: 15px ;
+    text-align: left; 
+    line-height: 0.5em ;
+}
+.formulaire p:first-child{
+    line-height: 1.5em ;
+    margin-top: 20px ;
+}
+.span1{
+    font-size: 1.7em ;
+    font-weight: bold ;
+}
+.span2{
+    font-weight: bold ;
+    color: #777 ;
+}
+.span3{
+    font-weight: bold ;
+}
+.span4{
+    color: #777 ;
+}
+input{
+    padding-left: 10px ;
+    margin-bottom: 10px ;
+    width: 96% ;
+    height: 30px ;
+    border: 1px solid #ddd ;
+    border-radius: 5px ;
+    font-family: 'Roboto' ;
+}
+textarea{
+    width: 96% ;
+    height: 150px ;
+    padding-left: 10px ;
+    padding-top: 8px ;
+    margin-bottom: 5px ;
+    border: 1px solid #ddd ;
+    border-radius: 5px ;
+    font-family: 'Roboto' ;
+}
+.bouton{
+    margin-bottom: 20px ;
+    margin-top: 10px ;
+    width: 110px ;
+    height: auto ;
+    font-size: 1em ;
+    font-weight: bold ;
+    background-color: #5cadd3 ; 
+    text-align: center ;
+    padding: 10px ;
+    padding-top: 12px ;
+    padding-bottom: 12px ;
+    border-radius: 3px ;
+    box-shadow: 0px 3px 0px #3491b2 ; 
+}
+.bouton a{
+    list-style-type: none ;
+    text-decoration: none ;
+    color: white ;
+}
+
+/********************** Partie media queries **********************/
+
+@media screen and (max-width: 1024px){
+    .slider_description{
+        top: 17% ;
+        left: 10% ;
+    }
+    .slider_description h1{
+        font-size: 1.6em ;
+    }
+    .contenu {
+        flex-wrap: wrap ;
+        justify-content: space-around ;
+    }
+    .image,.graphique,.image img{
+        width: 80% ;
+        height: auto ;
+    }
+    .graphique{
+        margin-bottom: 20px ;
+        width: 60% ;
+    }
+    .formulaire{
+        width: 250px ;
+        right: 70px ;
+    }
+    .fa-chevron-left{
+        top: 40% ;
+    }
+    .fa-chevron-right{
+        top: 40% ;
+    }
+
+}
+@media screen and (max-width: 768px){
+    #nav_fixe img{
+        width: 150px ;
+        height: auto ;
+        margin-left: 5% ;
+    }
+    #nav_fixe a{
+        font-size: 0.8em ;
+    }
+    .slider_description{
+        top: 17% ;
+        left: 10% ;
+        max-width: 90% ;
+    }
+    .slider_description h1{
+        font-size: 1.2em ;
+    }
+    .slider_description p{
+        font-size: 0.9em ;
+    }
+    #services p{
+        width: 90% ;
+        margin: auto ;
+    }
+    .graphique{
+        padding-left: 10% ;
+    }
+    .fa-chevron-left{
+        top: 30% ;
+    }
+    .fa-chevron-right{
+        top: 30% ;
+    }
+
+}
+@media screen and (max-width: 480px){
+    .menu li a{
+        margin-left: 0px ;
+    }
+    .menu{
+        width: 95% ;
+    }
+    #slider{
+        min-height: 200px ;
+    }
+    #slider figure{
+        opacity: 0 ;
+    }
+    .slider_description{
+        top: 10px ;
+        left: 20px ;
+    }
+    .slider_description h1{
+        font-size: 1.3em ;
+        text-align: center ;
+        color: #777 ;
+    }
+    .slider_description p{
+        text-align: center ;
+        color: #777 ;
+    }
+    .infos{
+        width: 60px ;
+        height: 10px ;
+        font-size: 0.7em ;
+        margin: auto ;
+    }
+    .section1{
+        margin-top: 0px ;
+    }
+    #projets p{
+        width: 90% ;
+        margin: auto ;
+        text-align: center ;
+        color: #777 ;
+        font-size: 0.9em ;
+    }
+
+    #nav_fixe{
+        display: block; 
+        width: 100% ;
+    }
+    #nav_fixe img{
+        width: 150px ;
+        margin-left: 30% ;
+        margin-top: 10px ;
+    }
+    .logo{
+        margin-top: 50px ;
+    }
+    .graphique{
+        width: 90% ;
+    }
+    #projets ul a{
+        font-size: 0.8em ;
+        padding: 10px 5px 7px ;
+    }
+    
+    .formulaire{
+        position: static ;
+        width: 100% ;
+        height: 475px ;
+        padding-top: 10px ;
+    }
+    input{
+        width: 80% ;
+    }
+    textarea{
+        width: 80% ;
+    }
+    #projets .portfolio p{
+        padding-top: 10px ;
+    }
+    #projets li:hover a:hover:before{
+        top: 32px ;
+    }
+    footer{
+        overflow: hidden ;
+    }
+    .barre{
+        display: none ;
+    }
+    .fa-chevron-left{
+        opacity: 0 ;
+    }
+    .fa-chevron-right{
+        opacity: 0 ;
+    }
+    
+    
+}
