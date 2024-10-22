@@ -1,6 +1,6 @@
 Webagency est le premier site que j'ai créé dans le cadre ma formation.
 
-Voici les objectifs attendu lors de cette exercie :
+Voici les objectifs attendus lors de cet exercice :
 
 Définir le contenu d'une page web à partir d'une maquette
 
