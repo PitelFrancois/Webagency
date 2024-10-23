@@ -1,4 +1,4 @@
-Webagency est le premier site que j'ai créé dans le cadre ma formation.
+Webagency est le premier site que j'ai créé dans le cadre de ma formation.
 
 Voici les objectifs attendus lors de cet exercice :
 
